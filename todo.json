@@ -1,0 +1,26 @@
+[
+    {
+        "text": "Learn Angular",
+        "checked": "true"
+    },
+    {
+        "text": "Build an Angular App",
+        "checked": "true"
+    },
+    {
+        "text": "React JS",
+        "checked": "false"
+    },
+    {
+        "text": "OOPS",
+        "checked": "true"
+    },
+    {
+        "text": "Design Patterns",
+        "checked": "false"
+    },
+    {
+        "text": "Pramu",
+        "checked": "true"
+    }
+]
