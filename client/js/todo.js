@@ -136,8 +136,10 @@ var AngularTodoList = React.createClass({
   handleRemove: function(i) {
 
     var todoitems = this.state.items;
+    
     todoitems[i].checked = event.target.checked;
-    var todoitem = {"id":i,"checked":event.target.checked};
+    
+    var todoitem = {"id":event.target.id,"checked":event.target.checked};
 
     this.setState({items: todoitems}, function() {
       // `setState` accepts a callback. To avoid (improbable) race condition,
@@ -167,6 +169,7 @@ var AngularTodoList = React.createClass({
             <label className={cssChecked}>
               <input
                   key={item.text}
+                  id={item._id}
                   type="checkbox"
                   checked={ischecked}
                   onChange={this.handleRemove.bind(this, i)}
@@ -205,6 +208,6 @@ var AngularTodoList = React.createClass({
 
 
 React.render(
-  <AngularTodoList url="todo.json" pollInterval="2000" />,
+  <AngularTodoList url="api/todos" pollInterval="2000" />,
   document.getElementById('content')
 );
